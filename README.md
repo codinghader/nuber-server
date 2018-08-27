@@ -7,15 +7,20 @@
 - [x] Sign In / Sign Up with facebook
 - [x] Sign In with email
 - [x] Start Phone nunmber verification
-- [ ] Complete Phone number verification
-- [ ] Sign Up with email
+- [x] Complete Phone number verification
+- [x] Sign Up with email
+
+---
+
+###Auth
+
+- [x] Generate JWT
+- [ ] Verify JWT
 
 ---
 
 ### Private Resolvers:
 
-- [ ] Generate JWT
-- [ ] Verify JWT
 - [ ] Verify Email
 - [ ] Get my Profile
 - [ ] Update my profile
