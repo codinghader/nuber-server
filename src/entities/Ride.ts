@@ -25,19 +25,19 @@ class Ride extends BaseEntity {
   pickUpAddress: string;
 
   @Column({ type: "double precision", default: 0 })
-  pickUpLat: boolean;
+  pickUpLat: number;
 
   @Column({ type: "double precision", default: 0 })
-  pickUpLng: boolean;
+  pickUpLng: number;
 
   @Column({ type: "text" })
   dropOffAddress: string;
 
   @Column({ type: "double precision", default: 0 })
-  dropOffLat: boolean;
+  dropOffLat: number;
 
   @Column({ type: "double precision", default: 0 })
-  dropOffLng: boolean;
+  dropOffLng: number;
 
   @Column({ type: "text" })
   price: string;
