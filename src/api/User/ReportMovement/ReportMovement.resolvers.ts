@@ -14,17 +14,12 @@ const resolvers: Resolvers = {
         { req, pubSub }
       ): Promise<ReportMovementResponse> => {
         const user: User = req.user;
-        console.log(args);
         const notNull = cleanNullArgs(args);
 
         try {
-          console.log("debug---");
-          console.log(user.id);
-
-          console.log(notNull);
-          console.log("debug---");
           await User.update({ id: user.id }, { ...notNull });
-          pubSub.publish("driverUpdate", { DriversSubscription: user });
+          const updatedUser = await User.findOne({ id: user.id });
+          pubSub.publish("driverUpdate", { DriversSubscription: updatedUser });
           return {
             ok: true,
             error: null
